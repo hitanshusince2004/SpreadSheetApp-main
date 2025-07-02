@@ -8,15 +8,26 @@ export interface SpreadsheetRow {
   assignee: string
   priority: "High" | "Medium" | "Low"
   dueDate: string
-  value: string
+  value: number
 }
 
-export interface FilterState {
-  status: string
-  priority: string
+export interface SortConfig {
+  key: keyof SpreadsheetRow | null
+  direction: "asc" | "desc" | null
 }
 
-export interface SortState {
-  field: keyof SpreadsheetRow | null
-  direction: "asc" | "desc"
+export interface FilterConfig {
+  status: string[]
+  priority: string[]
+  assignee: string[]
+}
+
+export interface CellPosition {
+  rowIndex: number
+  colIndex: number
+}
+
+export interface EditingCell {
+  rowId: number
+  field: keyof SpreadsheetRow
 }

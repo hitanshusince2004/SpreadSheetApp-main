@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: "React Spreadsheet - Intern Assignment",
   description:
     "A pixel-perfect Google Sheets-like spreadsheet interface built with React 18, TypeScript, and Tailwind CSS",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
